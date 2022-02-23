@@ -1,4 +1,8 @@
 import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import ProductDetails from "./pages/ProductDetails";
+import Products from "./pages/Products";
 
 function App() {
   return (
@@ -11,7 +15,10 @@ function App() {
           <Link to="/products">Products</Link>
         </nav>
         <Switch>
-            <Route exact path="/" component={Home}>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={About} />
+            <Route path="/products/:id" component={ProductDetails} />
+            <Route path="/products" component={Products} />
         </Switch>
       </BrowserRouter>
     </div>
