@@ -4,17 +4,14 @@ import About from "./pages/About";
 import ProductDetails from "./pages/ProductDetails";
 import Products from "./pages/Products";
 import Offers from "./pages/Offers";
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <nav>
-          <h1>Cave</h1>
-          <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/products">Products</Link>
-        </nav>
+        <Navbar />
         <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about/*" element={<About />} />
@@ -22,6 +19,7 @@ function App() {
             <Route path="/products" element={<Products />} />
             <Route path="/offers" element={<Offers />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );
