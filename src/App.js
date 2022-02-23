@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import ProductDetails from "./pages/ProductDetails";
 import Products from "./pages/Products";
+import Offers from "./pages/Offers";
 
 function App() {
   return (
@@ -16,9 +17,10 @@ function App() {
         </nav>
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/about/*" element={<About />} />
             <Route path="/products/:id" element={<ProductDetails />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/offers" element={<Offers />} />
         </Routes>
       </BrowserRouter>
     </div>

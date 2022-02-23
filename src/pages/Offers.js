@@ -8,7 +8,7 @@ const Offers = () => {
     ])
 
     return ( 
-        <div>
+        <div className="content">
             <h3>Latest Offers</h3>
             <div className="offers">
                 {items.map(item => (

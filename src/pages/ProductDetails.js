@@ -1,17 +1,18 @@
-import { Route, useParams } from "react-router-dom"
+import { Route, useParams, Routes, useNavigate, Link } from "react-router-dom"
 
 // nested routes
 import Offers from "./Offers"
 
 export default function ProductDetails() {
   const { id } = useParams()
-  //const { path } = useRouteMatch()
+  const navigate = useNavigate()
 
   return (
     <div className="content">
       <div className="product">
         <div className="image">
           <img src="https://via.placeholder.com/520x460" alt="" />
+          <Link style={{color:"#fff"}} to="/offers"><button id="offers--btn">Offers</button></Link>
         </div>
         <div className="details">
           <h2>Product - {id}</h2>
@@ -20,9 +21,10 @@ export default function ProductDetails() {
         </div>
       </div>
 
-      {/* <Route path={`${path}/offers`}>
-        <Offers />
-      </Route> */}
+      <Routes>
+        <Route path="offers" element={<Offers />}/>
+      </Routes>
+
     </div>
   )
 }
