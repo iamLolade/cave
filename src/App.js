@@ -15,10 +15,10 @@ function App() {
           <Link to="/products">Products</Link>
         </nav>
         <Routes>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
-            <Route path="/products/:id" component={ProductDetails} />
-            <Route path="/products" component={Products} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/products/:id" element={<ProductDetails />} />
+            <Route path="/products" element={<Products />} />
         </Routes>
       </BrowserRouter>
     </div>
